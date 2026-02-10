@@ -1,20 +1,5 @@
 {
-  "games": [
-    {
-      "name": "1v1.LOL",
-      "image": "https://via.placeholder.com/400x250?text=1v1.LOL",
-      "url": "https://1v1.lol"
-    },
-    {
-      "name": "Slope",
-      "image": "https://via.placeholder.com/400x250?text=Slope",
-      "url": "https://slopegame.io"
-    },
-    {
-      "name": "Monkey Mart",
-      "image": "https://via.placeholder.com/400x250?text=Monkey+Mart",
-      "url": "https://monkeymart.org"
-    }
-  ]
+  "name": "There Is No Game",
+  "image": "https://imgur.com/a/0vtLXvl",
+  "url": "https://23azostore.github.io/s/there-is-no-game/"
 }
-
