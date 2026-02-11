@@ -39,6 +39,11 @@
       "name": "Duck Life 1",
       "image": "assets/d.jpg",
       "url": "https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/flash/index.html?swf=ducklife.swf"
+    },
+    {
+      "name": "Impossible Quiz",
+      "image": "assets/q.jpg",
+      "url": "https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/flash/index.html?swf=theimpossiblequiz.swf"
     }
   ]
 }
