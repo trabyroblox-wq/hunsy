@@ -2,12 +2,12 @@
   "games": [
     {
       "name": "There Is No Game",
-      "image": "https://i.imgur.com/xyz.png",
+      "image": "assets/game1.png",
       "url": "https://23azostore.github.io/s/there-is-no-game/"
     },
     {
       "name": "Another Game",
-      "image": "https://i.imgur.com/abc.png",
+      "image": "assets/game2.png",
       "url": "https://example.com/game2/"
     }
   ]
