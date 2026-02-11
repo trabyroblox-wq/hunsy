@@ -1,12 +1,82 @@
-/* Settings button */
+/* Global styles */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #e0d7ff;
+  font-family: system-ui, sans-serif;
+}
+
+/* Header / Top section */
+.top {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #b784ff;
+}
+
+#search {
+  margin-top: 15px;
+  padding: 12px 18px;
+  width: 280px;
+  border-radius: 999px;
+  border: none;
+  background: #1a1a1a;
+  color: #e0d7ff;
+  outline: none;
+}
+
 #settingsBtn {
+  margin-top: 15px;
   background: #b784ff;
   border: none;
   padding: 8px 12px;
   border-radius: 10px;
   cursor: pointer;
-  margin-left: 15px;
   color: #0b0b0b;
+  font-weight: bold;
+}
+
+/* Game grid */
+#gameGrid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Game card */
+.game {
+  background: #151515;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(183, 132, 255, 0.6);
+}
+
+.game img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.game .name {
+  padding: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: #e0d7ff;
 }
 
 /* Settings panel */
@@ -36,6 +106,13 @@
   margin: 0 0 10px 0;
   text-align: center;
   color: #b784ff;
+}
+
+#settingsPanel label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
 }
 
 #settingsPanel button {
