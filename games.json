@@ -84,6 +84,11 @@
         "name": "Soccer Random",
         "image": "assets/sr.jpg",
         "url": "https://raw.githack.com/galacticnetwork/3kh0-assets/main/soccer-random/index.html"
+     },
+     {
+        "name": "My Flash Game",
+        "image": "assets/r2.png",
+        "url": "games/Run 2.html"
      }
   ]
 }
