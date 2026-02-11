@@ -1,4 +1,4 @@
-{
+   {
   "games": [
     {
       "name": "There Is No Game",
@@ -54,6 +54,11 @@
       "name": "Subway Surfers",
       "image": "assets/su.jpg",
       "url": "https://raw.githack.com/galacticnetwork/3kh0-assets/main/subway-surfers/index.html"
+    },
+    {
+      "name": "Super Smash Bros",
+      "image": "assets/3d.jpg",
+      "url": "https://super-smash-bros-unblocked.vercel.app/"
     }
   ]
 }
