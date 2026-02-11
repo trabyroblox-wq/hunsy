@@ -7,13 +7,10 @@ body {
   font-family: system-ui, sans-serif;
 }
 
-/* Header / Top section */
+/* Header / Top */
 .top {
   padding: 30px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .top h1 {
@@ -31,17 +28,6 @@ body {
   background: #1a1a1a;
   color: #e0d7ff;
   outline: none;
-}
-
-#settingsBtn {
-  margin-top: 15px;
-  background: #b784ff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #0b0b0b;
-  font-weight: bold;
 }
 
 /* Game grid */
@@ -79,6 +65,23 @@ body {
   color: #e0d7ff;
 }
 
+/* Floating settings button */
+.floating-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #b784ff;
+  color: #0b0b0b;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+.floating-btn:hover { background: #9c5fd9; }
+
 /* Settings panel */
 #settingsPanel {
   position: fixed;
@@ -98,20 +101,14 @@ body {
   gap: 15px;
 }
 
-#settingsPanel.show {
-  transform: translate(-50%, -50%) scale(1);
-}
+#settingsPanel.show { transform: translate(-50%, -50%) scale(1); }
 
-#settingsPanel h2 {
-  margin: 0 0 10px 0;
-  text-align: center;
-  color: #b784ff;
-}
+#settingsPanel h2 { text-align: center; color: #b784ff; margin: 0 0 10px 0; }
 
 #settingsPanel label {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   font-size: 16px;
 }
 
@@ -125,6 +122,4 @@ body {
   font-weight: bold;
 }
 
-#settingsPanel button:hover {
-  background: #9c5fd9;
-}
+#settingsPanel button:hover { background: #9c5fd9; }
