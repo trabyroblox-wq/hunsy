@@ -4,48 +4,53 @@
   <meta charset="UTF-8">
   <title>Hunsy 🐻</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+<body class="dark purpleBlack">
 
+  <!-- Header -->
+  <header class="top">
+    <h1>Hunsy 🐻</h1>
+    <input id="search" placeholder="Search games..." />
+  </header>
 
-<body>
+  <!-- Game grid -->
+  <main id="gameGrid"></main>
 
-<header class="top">
-  <h1>Hunsy 🐻</h1>
-  <input id="search" placeholder="Search games..." />
-</header>
+  <!-- Floating Settings Button -->
+  <button id="settingsBtn" class="floating-btn">⚙</button>
 
-<!-- Game grid -->
-<main id="gameGrid"></main>
+  <!-- Settings Panel -->
+  <div id="settingsPanel">
+    <h2>Settings</h2>
 
-<!-- Floating Settings button -->
-<button id="settingsBtn" class="floating-btn">⚙</button>
+    <label>
+      Mode:
+      <select id="modeSelect">
+        <option value="dark" selected>Dark</option>
+        <option value="normal">Normal</option>
+      </select>
+    </label>
 
-<!-- Settings panel -->
-<div id="settingsPanel">
-  <h2>Settings</h2>
-  
-  <label>
-    Theme:
-    <select id="themeSelect">
-      <option value="purpleBlack">Purple & Black</option>
-      <option value="blueBlack">Blue & Black</option>
-      <option value="redBlack">Red & Black</option>
-      <option value="greenBlack">Green & Black</option>
-    </select>
-  </label>
-  
-  <label>
-    <input type="checkbox" id="showNamesToggle" checked>
-    Show Game Names
-  </label>
-  
-  <button id="funButton">🎉 Surprise!</button>
-  <button id="closeSettings">✖ Close</button>
-</div>
+    <label>
+      Theme:
+      <select id="themeSelect">
+        <option value="purpleBlack" selected>Purple & Black</option>
+        <option value="blueBlack">Blue & Black</option>
+        <option value="redBlack">Red & Black</option>
+        <option value="greenBlack">Green & Black</option>
+      </select>
+    </label>
 
-<script src="script.js"></script>
+    <label>
+      <input type="checkbox" id="showNamesToggle" checked>
+      Show Game Names
+    </label>
+
+    <button id="funButton">🎉 Surprise!</button>
+    <button id="closeSettings">✖ Close</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
