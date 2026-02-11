@@ -81,8 +81,8 @@
        "url": "https://turbowarp.org/326343132/embed"
     },
      {
-        "name": "Soccer Random"
-        "imagge": "sr.jpg"
+        "name": "Soccer Random",
+        "imagge": "assets/sr.jpg",
         "url": "https://raw.githack.com/galacticnetwork/3kh0-assets/main/soccer-random/index.html"
      }
   ]
