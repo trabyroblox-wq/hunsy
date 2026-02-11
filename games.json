@@ -59,6 +59,11 @@
       "name": "Super Smash Bros",
       "image": "assets/3d.jpg",
       "url": "https://super-smash-bros-unblocked.vercel.app/"
-    }
+    },
+     {
+        "name": "Minecraft 1.8.8",
+        "image": "assets/mine.jpg",
+        "url": "https://kalibara4.github.io/eagler/1.8.8//"
+     }
   ]
 }
