@@ -79,6 +79,11 @@
        "name": "FNaF Help Wanted",
        "image": "assets/image.webp",
        "url": "https://turbowarp.org/326343132/embed"
-    }
+    },
+     {
+        "name": "Soccer Random"
+        "imagge": "sr.jpg"
+        "url": "https://raw.githack.com/galacticnetwork/3kh0-assets/main/soccer-random/index.html"
+     }
   ]
 }
