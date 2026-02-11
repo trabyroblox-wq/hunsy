@@ -49,6 +49,11 @@
       "name": "Drunken Boxing",
       "image": "download (17).jpg",
       "url": "https://script.google.com/macros/s/AKfycbwc5jVID-SwT0ooKZL4PklvYpIirxj62ayJAIVomuKBb3Y31W7ROeIBu6L28l7G8zACtw/exec"
+    },
+    {
+      "name": "Subway Surfers",
+      "image": "sub.jpg",
+      "url": "https://raw.githack.com/galacticnetwork/3kh0-assets/main/subway-surfers/index.html"
     }
   ]
 }
