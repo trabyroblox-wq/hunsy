@@ -94,6 +94,11 @@
         "name": "Minecraft 1.8.8",
         "image": "assets/mine.jpg",
         "url": "games/eaglercraft.html"
+     },
+     {
+        "name": "Chess",
+        "image": "assets/chess.png",
+        "url": "gfiles/html5/chess"
      }
   ]
 }
