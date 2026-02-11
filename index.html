@@ -12,7 +12,6 @@
   <input id="search" placeholder="Search games..." />
 </header>
 
-<!-- Game grid -->
 <main id="gameGrid"></main>
 
 <!-- Floating Settings button -->
@@ -21,7 +20,15 @@
 <!-- Settings panel -->
 <div id="settingsPanel">
   <h2>Settings</h2>
-  
+
+  <label>
+    Mode:
+    <select id="modeSelect">
+      <option value="dark">Dark</option>
+      <option value="normal">Normal</option>
+    </select>
+  </label>
+
   <label>
     Theme:
     <select id="themeSelect">
@@ -31,12 +38,12 @@
       <option value="greenBlack">Green & Black</option>
     </select>
   </label>
-  
+
   <label>
     <input type="checkbox" id="showNamesToggle" checked>
     Show Game Names
   </label>
-  
+
   <button id="funButton">🎉 Surprise!</button>
   <button id="closeSettings">✖ Close</button>
 </div>
