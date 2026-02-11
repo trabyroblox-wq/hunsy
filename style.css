@@ -1,14 +1,95 @@
-* { box-sizing: border-box; }
-body { margin: 0; background: #0b0b0b; color: white; font-family: system-ui, sans-serif; }
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
 
-.top { padding: 30px; text-align: center; }
-.top h1 { margin: 0; font-size: 42px; }
-#search { margin-top: 15px; padding: 12px 18px; width: 280px; border-radius: 999px; border: none; background: #1a1a1a; color: white; outline: none; }
+body {
+  margin: 0;
+  background: #0b0b0b;       /* Black background */
+  color: #e0d7ff;            /* Light purple text */
+  font-family: system-ui, sans-serif;
+}
 
-#gameGrid { padding: 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+/* Header / Top section */
+.top {
+  padding: 30px;
+  text-align: center;
+}
 
-.game { background: #151515; border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-.game:hover { transform: translateY(-5px); box-shadow: 0 0 25px rgba(180, 120, 255, 0.4); }
+.top h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #b784ff;            /* Purple title */
+}
 
-.game img { width: 100%; height: 140px; object-fit: cover; }
-.game .name { padding: 12px; font-weight: 600; text-align: center; }
+/* Search bar */
+#search {
+  margin-top: 15px;
+  padding: 12px 18px;
+  width: 280px;
+  border-radius: 999px;
+  border: none;
+  background: #1a1a1a;       /* Dark gray/black input */
+  color: #e0d7ff;            /* Light purple text */
+  outline: none;
+}
+
+/* Game grid */
+#gameGrid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Game card */
+.game {
+  background: #151515;       /* Dark gray background */
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(183, 132, 255, 0.6); /* Purple glow */
+}
+
+/* Game image */
+.game img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Game name */
+.game .name {
+  padding: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: #e0d7ff; /* Light purple text */
+}
+
+/* Play page iframe */
+iframe {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  border: none;
+}
+
+/* Buttons */
+button {
+  background: #b784ff;   /* Purple buttons */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #0b0b0b;        /* Dark text for contrast */
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #9c5fd9;   /* Darker purple on hover */
+}
