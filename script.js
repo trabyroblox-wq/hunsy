@@ -2,7 +2,6 @@ const grid = document.getElementById("gameGrid");
 const search = document.getElementById("search");
 let allGames = [];
 
-// Load games from JSON
 fetch("games.json")
   .then(res => res.json())
   .then(data => {
@@ -10,13 +9,14 @@ fetch("games.json")
     render(allGames);
   });
 
-// Render games
 function render(games) {
   grid.innerHTML = "";
+  
   if (games.length === 0) {
     grid.innerHTML = "<p style='text-align:center;color:#888;'>No games found.</p>";
     return;
   }
+
   games.forEach(game => {
     const div = document.createElement("div");
     div.className = "game";
@@ -31,8 +31,19 @@ function render(games) {
   });
 }
 
-// Search filter
 search.addEventListener("input", () => {
   const q = search.value.toLowerCase();
+
+  // Easter egg: if user types 'bear', show the bear image
+  if (q === "bear") {
+    grid.innerHTML = `
+      <div style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
+        <img src="assets/bear.png" style="width:300px;height:auto;margin-top:20px;">
+        <div style="color:#b784ff;font-size:24px;margin-top:10px;">🐻 You found the bear!</div>
+      </div>
+    `;
+    return;
+  }
+
   render(allGames.filter(g => g.name.toLowerCase().includes(q)));
 });
