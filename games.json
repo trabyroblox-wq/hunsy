@@ -64,6 +64,11 @@
         "name": "Minecraft 1.8.8",
         "image": "assets/mine.jpg",
         "url": "https://kalibara4.github.io/eagler/1.8.8//"
+     },
+     {
+        "name": "1 on 1 Soccer",
+        "image": "1on1.jpg",
+        "url": "https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/flash/index.html?swf=1on1soccer.swf"
      }
   ]
 }
