@@ -109,6 +109,11 @@
       "name": "1v1.lol",
       "image": "assets/1v1lol.jpg",
       "url": "https://example.com/games/1v1-lol"
+    },
+    {
+      "name": "Stickman Bank Guy"
+      "image": "assets/stick.jpg"
+      "url": "assets/swf/breakingthebank.swf"
     }
   ]
 }
