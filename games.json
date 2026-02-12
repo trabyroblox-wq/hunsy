@@ -1,4 +1,4 @@
-   {
+{
   "games": [
     {
       "name": "There Is No Game",
@@ -60,55 +60,55 @@
       "image": "assets/3d.jpg",
       "url": "https://super-smash-bros-unblocked.vercel.app/"
     },
-     {
-        "name": "1 on 1 Soccer",
-        "image": "assets/1on1.jpg",
-        "url": "https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/flash/index.html?swf=1on1soccer.swf"
-     },
     {
-       "name": "Geo Dash",
-       "image": "assets/geo.jpg",
-       "url": "https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/html5/geometrydash/index.html"
+      "name": "1 on 1 Soccer",
+      "image": "assets/1on1.jpg",
+      "url": "https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/flash/index.html?swf=1on1soccer.swf"
     },
     {
-       "name": "FNaF Help Wanted",
-       "image": "assets/image.webp",
-       "url": "https://turbowarp.org/326343132/embed"
+      "name": "Geo Dash",
+      "image": "assets/geo.jpg",
+      "url": "https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/html5/geometrydash/index.html"
     },
-     {
-        "name": "Soccer Random",
-        "image": "assets/sr.jpg",
-        "url": "https://raw.githack.com/galacticnetwork/3kh0-assets/main/soccer-random/index.html"
-     },
-     {
-        "name": "Run 2",
-        "image": "assets/r2.png",
-        "url": "games/Run 2.html"
-     },
-     {
-        "name": "Bloons TD 2",
-        "image": "assets/ball2.jpg",
-        "url": "games/Bloon.html"
-     },
-     {
-        "name": "Minecraft 1.8.8",
-        "image": "assets/mine.jpg",
-        "url": "games/eaglercraft.html"
-     },
-     {
-        "name": "Chess",
-        "image": "assets/chess.png",
-        "url": "gfiles/html5/chess"
-     },
-     {
-        "name": "Duck Life 2",
-        "image": "assets/d12.png",
-        "url": "games/index.html"
-     },
-     {
-        "name": "1v1.lol",
-        "image": "assets/1v1lol.jpg",
-        "url": "games/1v1-lol"
-     }
+    {
+      "name": "FNaF Help Wanted",
+      "image": "assets/image.webp",
+      "url": "https://turbowarp.org/326343132/embed"
+    },
+    {
+      "name": "Soccer Random",
+      "image": "assets/sr.jpg",
+      "url": "https://raw.githack.com/galacticnetwork/3kh0-assets/main/soccer-random/index.html"
+    },
+    {
+      "name": "Run 2",
+      "image": "assets/r2.png",
+      "url": "https://example.com/games/Run%202.html"
+    },
+    {
+      "name": "Bloons TD 2",
+      "image": "assets/ball2.jpg",
+      "url": "https://example.com/games/Bloon.html"
+    },
+    {
+      "name": "Minecraft 1.8.8",
+      "image": "assets/mine.jpg",
+      "url": "https://example.com/games/eaglercraft.html"
+    },
+    {
+      "name": "Chess",
+      "image": "assets/chess.png",
+      "url": "https://example.com/gfiles/html5/chess"
+    },
+    {
+      "name": "Duck Life 2",
+      "image": "assets/d12.png",
+      "url": "https://example.com/games/index.html"
+    },
+    {
+      "name": "1v1.lol",
+      "image": "assets/1v1lol.jpg",
+      "url": "https://example.com/games/1v1-lol"
+    }
   ]
 }
