@@ -239,6 +239,11 @@
     "name": "Snow Rider 3D",
     "image": "assets/sr3d.jpg",
     "url": "games/snowrider3d/index.html"
+   },
+   {
+    "name": "Bit Life",
+    "image": "assets/bit.png",
+    "url": "games/bitlife/index.html"
    }
   ]
 }
