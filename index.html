@@ -145,50 +145,6 @@
   <script src="script.js"></script>
 
 
-  <!-- Background Music Script -->
-  <script>
-    let songs = [];
-    let current = 0;
-
-    const audio = document.getElementById("audio");
-    const cover = document.getElementById("bgCover");
-    const titleEl = document.getElementById("bgTitle");
-    const artistEl = document.getElementById("bgArtist");
-    const volume = document.getElementById("volume");
-
-    fetch("music.json")
-      .then(r => r.json())
-      .then(d => {
-        songs = d.songs;
-        loadSong(0);
-      });
-
-    function loadSong(i) {
-      current = i;
-      const s = songs[i];
-      audio.src = s.audio;
-      cover.src = s.image;
-      titleEl.textContent = s.name;
-      artistEl.textContent = s.artist;
-    }
-
-    function togglePlay() {
-      audio.paused ? audio.play() : audio.pause();
-    }
-
-    function nextSong() {
-      loadSong((current + 1) % songs.length);
-      audio.play();
-    }
-
-    function prevSong() {
-      loadSong((current - 1 + songs.length) % songs.length);
-      audio.play();
-    }
-
-    volume.oninput = () => audio.volume = volume.value;
-  </script>
-
   <!-- Password System -->
   <script>
     const PASSWORD = "doodledoodlepencilfart";
