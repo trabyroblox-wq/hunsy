@@ -4,158 +4,124 @@
   <meta charset="UTF-8">
   <title>Hunsy 🐻</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico">
 </head>
+
 <body class="dark purpleBlack">
-<!-- Password Overlay -->
-<div id="pwOverlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#0b0b0b;z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;">
-  <h2>You Found the Site Now Found the Password 😂🐻</h2>
-  <input type="password" id="pwInput" placeholder="Password" style="padding:10px 15px;border-radius:8px;border:none;margin-top:10px;font-size:16px;">
-  <button id="pwSubmit" style="margin-top:10px;padding:10px 20px;border-radius:8px;border:none;background:#b784ff;color:#0b0b0b;font-weight:bold;cursor:pointer;">Submit</button>
-  <div id="pwError" style="margin-top:10px;color:red;display:none;">Incorrect password!</div>
+
+<!-- ================= PASSWORD OVERLAY ================= -->
+<div id="pwOverlay">
+  <h2>You Found the Site… Now Find the Password 🐻</h2>
+  <input type="password" id="pwInput" placeholder="Password">
+  <button id="pwSubmit">Submit</button>
+  <div id="pwError">Incorrect password!</div>
 </div>
 
-  <!-- Particle Background -->
-  <div class="particles"></div>
+<!-- ================= SHAPE BACKGROUND ================= -->
+<div class="shape-bg">
+  <span></span><span></span><span></span><span></span>
+</div>
 
-  <!-- Header -->
-  <header class="top">
-    <h1>Hunsy 🐻</h1>
+<!-- ================= HEADER ================= -->
+<header class="top">
+  <h1>Hunsy 🐻</h1>
 
-    <!-- NAV BAR -->
-    <nav class="nav">
-      <a href="index.html">🏠 Home</a>
-      <a href="music.html">🎵 BG Music</a>
-    </nav>
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="music.html">🎵 BG Music</a>
+  </nav>
+</header>
 
-    <input id="search" placeholder="Search games..." />
-  </header>
+<!-- ================= SEARCH (CORNER + K HOTKEY) ================= -->
+<input id="search" placeholder="Search games…  (Press K)" />
 
-  <!-- Game grid -->
-  <main id="gameGrid"></main>
+<!-- ================= GAME GRID ================= -->
+<main id="gameGrid"></main>
 
-  <!-- Floating Settings Button -->
-  <button id="settingsBtn" class="floating-btn">⚙</button>
+<!-- ================= SETTINGS BUTTON ================= -->
+<button id="settingsBtn" class="floating-btn">⚙</button>
 
-  <!-- Settings Panel -->
-  <div id="settingsPanel">
-    <h2>Settings</h2>
+<!-- ================= SETTINGS PANEL ================= -->
+<div id="settingsPanel">
+  <h2>Settings</h2>
 
-    <label>
-      Mode:
-      <select id="modeSelect">
-        <option value="dark" selected>Dark</option>
-        <option value="normal">Normal</option>
-      </select>
-    </label>
+  <label>
+    Mode:
+    <select id="modeSelect">
+      <option value="dark" selected>Dark</option>
+      <option value="normal">Normal</option>
+    </select>
+  </label>
 
-    <label>
-      Theme:
-      <select id="themeSelect">
-        <option value="purpleBlack" selected>Purple & Black</option>
-        <option value="blueBlack">Blue & Black</option>
-        <option value="redBlack">Red & Black</option>
-        <option value="greenBlack">Green & Black</option>
-      </select>
-    </label>
+  <label>
+    Theme:
+    <select id="themeSelect">
+      <option value="purpleBlack" selected>Purple & Black</option>
+      <option value="blueBlack">Blue & Black</option>
+      <option value="redBlack">Red & Black</option>
+      <option value="greenBlack">Green & Black</option>
+    </select>
+  </label>
 
-    <label>
-      <input type="checkbox" id="showNamesToggle" checked>
-      Show Game Names
-    </label>
+  <label>
+    <input type="checkbox" id="showNamesToggle" checked>
+    Show Game Names
+  </label>
 
-    <button id="funButton">🎉 Surprise!</button>
-    <button id="closeSettings">✖ Close</button>
+  <button id="funButton">🎉 Surprise!</button>
+  <button id="closeSettings">✖ Close</button>
+</div>
+
+<!-- ================= BACKGROUND MUSIC ================= -->
+<div id="bgPlayer" class="bg-player">
+  <img id="bgCover">
+  <div>
+    <div id="bgTitle">No song playing</div>
+    <div id="bgArtist"></div>
   </div>
+  <button onclick="prevSong()">⏮</button>
+  <button onclick="togglePlay()">▶</button>
+  <button onclick="nextSong()">⏭</button>
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+  <audio id="audio"></audio>
+</div>
 
-  <!-- GLOBAL BACKGROUND MUSIC PLAYER -->
-  <div id="bgPlayer" class="bg-player">
-    <img id="bgCover" src="" alt="Album cover">
-    <div>
-      <div id="bgTitle">No song playing</div>
-      <div id="bgArtist"></div>
-    </div>
-    <button onclick="prevSong()">⏮</button>
-    <button onclick="togglePlay()">▶</button>
-    <button onclick="nextSong()">⏭</button>
-    <input type="range" min="0" max="1" step="0.01" id="volume" value="0.5">
-    <audio id="audio"></audio>
-  </div>
+<!-- ================= MAIN SCRIPT ================= -->
+<script src="script.js"></script>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
-
-  <!-- Particle Script -->
-  <script>
-    const particlesContainer = document.querySelector('.particles');
-    const colors = ['#ffffff', '#d1c4e9', '#b39ddb', '#e0d7ff'];
-    for (let i = 0; i < 60; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      particle.style.width = `${Math.random()*8+4}px`;
-      particle.style.height = particle.style.width;
-      particle.style.left = `${Math.random()*100}vw`;
-      particle.style.animationDuration = `${Math.random()*10+5}s`;
-      particle.style.background = colors[Math.floor(Math.random()*colors.length)];
-      particle.style.opacity = Math.random();
-      particle.style.animationDelay = `${Math.random()*5}s`;
-      particlesContainer.appendChild(particle);
-    }
-  </script>
-
-  <!-- Background Music Script -->
-  <script>
-    let songs = [];
-    let current = 0;
-    const audio = document.getElementById("audio");
-    const cover = document.getElementById("bgCover");
-    const titleEl = document.getElementById("bgTitle");
-    const artistEl = document.getElementById("bgArtist");
-    const volume = document.getElementById("volume");
-
-    fetch("music.json")
-      .then(r => r.json())
-      .then(d => { songs = d.songs; loadSong(0); });
-
-    function loadSong(i) {
-      current = i;
-      const s = songs[i];
-      audio.src = s.audio;
-      cover.src = s.image;
-      titleEl.textContent = s.name;
-      artistEl.textContent = s.artist;
-    }
-
-    function togglePlay() { audio.paused ? audio.play() : audio.pause(); }
-    function nextSong() { loadSong((current+1) % songs.length); audio.play(); }
-    function prevSong() { loadSong((current-1+songs.length) % songs.length); audio.play(); }
-    volume.oninput = () => audio.volume = volume.value;
-  </script>
+<!-- ================= SEARCH HOTKEY ================= -->
 <script>
-// --- Password System ---
+document.addEventListener("keydown", (e) => {
+  if (e.key.toLowerCase() === "k") {
+    const s = document.getElementById("search");
+    s.focus();
+    s.select();
+  }
+});
+</script>
+
+<!-- ================= PASSWORD SYSTEM ================= -->
+<script>
 const PASSWORD = "doodledoodlepencilfart";
 const pwOverlay = document.getElementById("pwOverlay");
 const pwInput = document.getElementById("pwInput");
 const pwSubmit = document.getElementById("pwSubmit");
 const pwError = document.getElementById("pwError");
 
-// Check if password is already stored
 if (localStorage.getItem("hunsyPassword") === PASSWORD) {
   pwOverlay.style.display = "none";
 }
 
-// Submit password
-pwSubmit.addEventListener("click", () => {
+pwSubmit.onclick = () => {
   if (pwInput.value === PASSWORD) {
     localStorage.setItem("hunsyPassword", PASSWORD);
     pwOverlay.style.display = "none";
   } else {
     pwError.style.display = "block";
   }
-});
+};
 
-// Optional: Enter key
-pwInput.addEventListener("keypress", (e) => {
+pwInput.addEventListener("keydown", e => {
   if (e.key === "Enter") pwSubmit.click();
 });
 </script>
