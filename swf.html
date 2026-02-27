@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SWF Emulator 🖥️</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: #0b0b0b;
+      border-bottom: 1px solid #1c1c1c;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    nav a {
+      margin-left: 18px;
+      font-size: 14px;
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    h1.page-title {
+      margin: 30px 0 20px;
+    }
+
+    /* Hidden file input */
+    input[type="file"] {
+      display: none;
+    }
+
+    /* Purple → dark magenta upload button */
+    .upload-btn {
+      padding: 14px 28px;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin: 10px;
+      color: #fff;
+      background: linear-gradient(90deg, #b784ff, #8b008b);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .upload-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Emulator display area */
+    #emulatorContainer {
+      margin-top: 30px;
+      width: 800px;
+      height: 600px;
+      border: 2px solid #444;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #emulatorContainer embed {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+    @media (max-width: 850px) {
+      #emulatorContainer {
+        width: 90%;
+        height: 450px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>SWF Emulator 🖥️</h1>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="swf.html">🖥️ SWF Emulator</a>
+    </nav>
+  </header>
+
+  <h1 class="page-title">Upload your SWF</h1>
+
+  <!-- SWF Upload -->
+  <input type="file" id="swfInput" accept=".swf">
+  <button class="upload-btn" onclick="document.getElementById('swfInput').click()">
+    📂 Upload SWF
+  </button>
+
+  <!-- Display container -->
+  <div id="emulatorContainer">
+    <p>No SWF loaded</p>
+  </div>
+
+  <!-- Ruffle JS -->
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+  <script>
+    const container = document.getElementById("emulatorContainer");
+    const ruffle = window.RufflePlayer.newest();
+
+    // SWF upload handler
+    document.getElementById("swfInput").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const url = URL.createObjectURL(file);
+      container.innerHTML = "";
+      const player = ruffle.createPlayer();
+      container.appendChild(player);
+      player.load(url);
+    });
+  </script>
+</body>
+</html>
