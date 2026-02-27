@@ -244,6 +244,11 @@
     "name": "Bit Life",
     "image": "assets/bit.png",
     "url": "games/bitlife/index.html"
+   },
+   {
+    "name": "CSGO Clicker",
+    "image": "assets/csgoclicker.png",
+    "url": "games/csgoclicker/index.html"
    }
   ]
 }
