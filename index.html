@@ -73,7 +73,6 @@
     <!-- NAV BAR -->
     <nav class="nav">
       <a href="index.html">🏠 Home</a>
-      <a href="music.html">🎵 BG Music</a>
     </nav>
 
     <input id="search" placeholder="Search games..." />
@@ -82,68 +81,8 @@
   <!-- Game grid -->
   <main id="gameGrid"></main>
 
-  <!-- Floating Settings Button -->
-  <button id="settingsBtn" class="floating-btn">⚙</button>
-
-  <!-- Settings Panel -->
-  <div id="settingsPanel">
-    <h2>Settings</h2>
-
-    <label>
-      Mode:
-      <select id="modeSelect">
-        <option value="dark" selected>Dark</option>
-        <option value="normal">Normal</option>
-      </select>
-    </label>
-
-    <label>
-      Theme:
-      <select id="themeSelect">
-        <option value="purpleBlack" selected>Purple & Black</option>
-        <option value="blueBlack">Blue & Black</option>
-        <option value="redBlack">Red & Black</option>
-        <option value="greenBlack">Green & Black</option>
-      </select>
-    </label>
-
-    <label>
-      <input type="checkbox" id="showNamesToggle" checked>
-      Show Game Names
-    </label>
-
-    <button id="funButton">🎉 Surprise!</button>
-    <button id="closeSettings">✖ Close</button>
-  </div>
-
-  <!-- GLOBAL BACKGROUND MUSIC PLAYER -->
-  <div id="bgPlayer" class="bg-player">
-    <img id="bgCover" src="" alt="Album cover">
-
-    <div>
-      <div id="bgTitle">No song playing</div>
-      <div id="bgArtist"></div>
-    </div>
-
-    <button onclick="prevSong()">⏮</button>
-    <button onclick="togglePlay()">▶</button>
-    <button onclick="nextSong()">⏭</button>
-
-    <input
-      type="range"
-      min="0"
-      max="1"
-      step="0.01"
-      id="volume"
-      value="0.5"
-    >
-
-    <audio id="audio"></audio>
-  </div>
-
   <!-- Scripts -->
   <script src="script.js"></script>
-
 
   <!-- Password System -->
   <script>
