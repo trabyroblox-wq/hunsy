@@ -17,29 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ================= PARTICLE BACKGROUND ================= */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
-    radial-gradient(2px 2px at 200px 150px, #fff, transparent),
-    radial-gradient(2px 2px at 400px 80px, #fff, transparent),
-    radial-gradient(2px 2px at 700px 220px, #fff, transparent),
-    radial-gradient(2px 2px at 900px 120px, #fff, transparent);
-  background-repeat: repeat;
-  background-size: 1000px 400px;
-  animation: starsMove 70s linear infinite;
-  opacity: 0.35;
-  z-index: -1;
-}
-
-@keyframes starsMove {
-  from { transform: translateY(0); }
-  to { transform: translateY(-400px); }
-}
-
 /* ================= HEADER ================= */
 header {
   display: flex;
