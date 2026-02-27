@@ -46,33 +46,42 @@ body {
 /* ========= GAME GRID ========= */
 #gameGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 25px;
 }
 
+/* Card box */
 .gameCard {
   background: #1a1a1a;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 12px;
 }
 
 .gameCard:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
+/* Image container */
 .gameCard img {
   width: 100%;
+  height: 160px;          /* 👈 ALL SAME HEIGHT */
+  object-fit: cover;      /* 👈 Prevent stretching */
   display: block;
 }
 
+/* Game name */
 .gameCard h3 {
-  margin: 0;
-  padding: 8px;
-  text-align: center;
-  font-size: 14px;
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;      /* 👈 BOLD NAME */
 }
 
 /* ========= PARTICLES ========= */
