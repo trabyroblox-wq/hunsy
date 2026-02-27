@@ -249,6 +249,11 @@
     "name": "CSGO Clicker",
     "image": "assets/csgoclicker.png",
     "url": "games/csgoclikcer/index.html"
+   },
+   {
+    "name": "Slope",
+    "image": "assets/dlp.png",
+    "url": "games/slope/index.html"
    }
   ]
 }
