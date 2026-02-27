@@ -100,8 +100,6 @@ main {
   background: #0d0d0d;
 }
 
-
-
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1400px) {
   #gameGrid {
