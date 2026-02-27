@@ -66,9 +66,6 @@
     </div>
   </div>
 
-  <!-- Particle Background -->
-  <div class="particles"></div>
-
   <!-- Header -->
   <header class="top">
     <h1>Hunsy 🐻</h1>
@@ -147,27 +144,6 @@
   <!-- Scripts -->
   <script src="script.js"></script>
 
-  <!-- Particle Script -->
-  <script>
-    const particlesContainer = document.querySelector('.particles');
-    const colors = ['#ffffff', '#d1c4e9', '#b39ddb', '#e0d7ff'];
-
-    for (let i = 0; i < 60; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-
-      particle.style.width = `${Math.random() * 8 + 4}px`;
-      particle.style.height = particle.style.width;
-      particle.style.left = `${Math.random() * 100}vw`;
-      particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
-      particle.style.background =
-        colors[Math.floor(Math.random() * colors.length)];
-      particle.style.opacity = Math.random();
-      particle.style.animationDelay = `${Math.random() * 5}s`;
-
-      particlesContainer.appendChild(particle);
-    }
-  </script>
 
   <!-- Background Music Script -->
   <script>
