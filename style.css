@@ -1,107 +1,65 @@
-/* ========== GLOBAL RESET ========== */
+/* ===== BASIC RESET ===== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  overflow-x: hidden;
-  background: #0b0b0f;
+  margin: 0;
+  background: #0b0b0b;
   color: white;
-  position: relative;
 }
 
-/* ========== SHAPE BACKGROUND ========== */
-body::before {
-  content: "";
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background:
-    radial-gradient(circle at 20% 30%, #1a1a1f 0%, transparent 40%),
-    radial-gradient(circle at 70% 60%, #2d1b4d 0%, transparent 45%),
-    radial-gradient(circle at 40% 80%, #111 0%, transparent 50%),
-    radial-gradient(circle at 85% 20%, #3b1f66 0%, transparent 40%);
-  z-index: -2;
-  animation: floatBg 25s linear infinite;
-}
-
-@keyframes floatBg {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* ========== HEADER ========== */
+/* ===== HEADER ===== */
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  position: relative;
+  padding: 20px;
+  background: #111;
 }
 
 .top h1 {
-  font-size: 32px;
-  font-weight: 700;
+  margin: 0;
 }
 
-/* NAV */
 .nav a {
   margin: 0 10px;
+  color: #b784ff;
   text-decoration: none;
-  color: #c7a4ff;
-  font-weight: 600;
-  transition: 0.2s;
+  font-weight: bold;
 }
 
 .nav a:hover {
   color: white;
 }
 
-/* ========== SEARCH BAR ========== */
+/* ===== SEARCH ===== */
 #search {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 220px;
-  padding: 10px 15px;
-  border-radius: 30px;
-  border: 2px solid #6e45c8;
-  background: rgba(20, 20, 25, 0.85);
-  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
   outline: none;
-  transition: 0.3s;
-  backdrop-filter: blur(8px);
 }
 
-#search:focus {
-  width: 300px;
-  border-color: #b784ff;
-  box-shadow: 0 0 15px #b784ff55;
-}
-
-/* ========== GAME GRID (UNCHANGED STYLE WISE) ========== */
+/* ===== GAME GRID ===== */
 #gameGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 100px 40px 40px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
 }
 
 .gameCard {
-  background: rgba(25, 25, 30, 0.9);
-  border-radius: 16px;
+  background: #1a1a1a;
+  border-radius: 10px;
   overflow: hidden;
-  transition: 0.3s;
   cursor: pointer;
-  backdrop-filter: blur(10px);
+  transition: transform 0.2s;
 }
 
 .gameCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px #8f5cff55;
+  transform: scale(1.05);
 }
 
 .gameCard img {
@@ -110,43 +68,53 @@ body::before {
 }
 
 .gameCard h3 {
-  padding: 10px;
-  font-size: 16px;
   text-align: center;
+  padding: 8px;
+  font-size: 14px;
 }
 
-/* ========== SETTINGS BUTTON ========== */
+/* ===== PARTICLES ===== */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 12s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* ===== SETTINGS BUTTON ===== */
 .floating-btn {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #6e45c8;
-  color: white;
+  bottom: 20px;
+  right: 20px;
+  background: #b784ff;
+  color: black;
   border: none;
-  padding: 14px;
   border-radius: 50%;
-  font-size: 18px;
+  padding: 12px;
   cursor: pointer;
-  box-shadow: 0 0 20px #6e45c855;
-  transition: 0.3s;
+  font-size: 18px;
 }
 
-.floating-btn:hover {
-  transform: scale(1.1);
-}
-
-/* ========== SETTINGS PANEL ========== */
+/* ===== SETTINGS PANEL ===== */
 #settingsPanel {
   position: fixed;
-  right: -320px;
+  right: -260px;
   top: 0;
-  width: 300px;
+  width: 250px;
   height: 100%;
-  background: #111118;
-  padding: 25px;
-  transition: 0.4s;
-  box-shadow: -5px 0 20px #000;
-  z-index: 10000;
+  background: #111;
+  padding: 20px;
+  transition: right 0.3s;
 }
 
 #settingsPanel.active {
@@ -154,38 +122,33 @@ body::before {
 }
 
 #settingsPanel h2 {
-  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 #settingsPanel label {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 #settingsPanel button {
   margin-top: 10px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
-/* ========== PARTICLES KEEP WORKING ========== */
-.particles {
+/* ===== MUSIC PLAYER ===== */
+.bg-player {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
 }
 
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  animation: floatParticle linear infinite;
-}
-
-@keyframes floatParticle {
-  from { transform: translateY(100vh); }
-  to { transform: translateY(-10vh); }
+.bg-player img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
 }
