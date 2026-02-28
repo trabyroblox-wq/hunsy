@@ -319,6 +319,11 @@
     "name": "Time Shooter",
     "image": "assets/ts.jpg",
     "url": "TimeShooter/index.html"
+   },
+   {
+    "name": "Time Shooter 2",
+    "image": "assets/ts2.jpg",
+    "url": "TimeShooter2/index.html"
    }
   ]
 }
