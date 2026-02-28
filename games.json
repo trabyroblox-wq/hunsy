@@ -25,6 +25,11 @@
       "image": "assets/bear2.jpg",
       "url": "games/fnaf1/index.html"
     },
+   {
+    "name": "FNaf Dos",
+    "image": "assets/fnaf2.jpg",
+    "url": "games/fnaf the squeakquel/index.html"
+   }
     {
       "name": "Retro Bowl",
       "image": "assets/rb.png",
