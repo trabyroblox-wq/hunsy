@@ -259,6 +259,11 @@
     "name": "Slope",
     "image": "assets/dlp.png",
     "url": "games/slope/index.html"
-   }
+   },
+   {
+    "name": "The Final Earth 1",
+    "image": "assets/tfe1.png",
+    "url": "games/the-final-earth/index.html"
+   },
   ]
 }
