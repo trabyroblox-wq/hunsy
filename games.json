@@ -354,6 +354,11 @@
     "name": "Papa's Sushiria",
     "image": "assets/ppsus.webp",
     "url": "games/Papa'sSushiria/index.html"
+   },
+   {
+    "name": "Tiny Fishing",
+    "images": "assets/tfing.webp",
+    "url": "games/TinyFishing/index.html"
    }
   ]
 }
