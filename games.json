@@ -314,6 +314,11 @@
     "name": "Stickman Hook",
     "image": "assets/smh.webp",
     "url": "games/StickmanHook/index.html"
+   },
+   {
+    "name": "Time Shooter",
+    "image": "assets/ts.jpg",
+    "url": "TimeShooter/index.html"
    }
   ]
 }
