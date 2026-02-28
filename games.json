@@ -294,6 +294,11 @@
     "name": "Tron Flash",
     "image": "assets/trpn.jpg",
     "url": "games/tron.html"
+   },
+   {
+    "name": "Chib Knight",
+    "image": "assets/ck.jpg",
+    "url": "games/chibiknight.html"
    }
   ]
 }
