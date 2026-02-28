@@ -329,6 +329,11 @@
     "name": "Only Up!",
     "image": "assets/ou.jpeg",
     "url": "games/OnlyUp!/index.html"
+   },
+   {
+    "name": "Papa's Cheeseria",
+    "image": "assets/ppc.webp",
+    "url": "games/Papa'sCheeseria/index.html"
    }
   ]
 }
