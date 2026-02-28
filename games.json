@@ -359,6 +359,11 @@
     "name": "Tiny Fishing",
     "images": "assets/tfing.webp",
     "url": "games/TinyFishing/index.html"
+   },
+   {
+    "name": "The Impossible Quiz",
+    "image": "assets/tiq.webp",
+    "url": "games/tiq.html"
    }
   ]
 }
