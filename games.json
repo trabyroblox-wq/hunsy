@@ -55,6 +55,11 @@
       "image": "assets/dl3.jpg",
       "url": "games/dl3.html"
     },
+   {
+    "name": "Duck Life 4",
+    "image": "assets/dl4.jpg",
+    "url": "games/ducklife4/index.html"
+   }
     {
       "name": "Impossible Quiz",
       "image": "assets/q.jpg",
