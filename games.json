@@ -344,6 +344,11 @@
     "name": "Papa's Pancakeria",
     "image": "assets/ppp.jpg",
     "url": "games/Papa'sPancakeria/index.html"
+   },
+   {
+    "name": "Papa's Pizzeria",
+    "image": "assets/ppi.jpg",
+    "url": "games/Papa'sPizzeria/index.html"
    }
   ]
 }
