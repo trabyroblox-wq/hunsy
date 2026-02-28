@@ -289,6 +289,11 @@
     "name": "Kill the Ice Age Baby 2",
     "image": "assets/cover-1583337359346.webp",
     "url": "games/killiceagebaby2/index.html"
+   },
+   {
+    "name": "Tron Flash",
+    "image": "assets/trpn.jpg",
+    "url": "games/tron.html"
    }
   ]
 }
