@@ -284,6 +284,11 @@
     "name": "Monkey Mart",
     "image": "assets/mm.jpg",
     "url": "assets/ous.png"
+   },
+   {
+    "name": "Kill the Ice Age Baby 2",
+    "image": "assets/cover-1583337359346.webp",
+    "url": "games/killiceagebaby2/index.html"
    }
   ]
 }
