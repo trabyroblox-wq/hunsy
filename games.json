@@ -269,6 +269,11 @@
     "name": "Doodle Jump",
     "image": "assets/dj.jpg",
     "url": "games/doodle-jump/index.html"
+   },
+   {
+    "name": "Learn 2 Fly 2",
+    "image": "assets/l2f2.jpg",
+    "url": "games/learn-to-fly-2/index.html"
    }
   ]
 }
