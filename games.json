@@ -265,5 +265,10 @@
     "image": "assets/tfe1.png",
     "url": "games/the-final-earth/index.html"
    },
+   {
+    "name": "Doodle Jump",
+    "image": "assets/dj.jpg",
+    "url": "games/doodle-jump/index.html"
+   }
   ]
 }
