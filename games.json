@@ -304,6 +304,11 @@
     "name": "TABS",
     "image": "assets/tabs.jpg",
     "url": "games/TABS/index.html"
+   },
+   {
+    "name": "Squid Game",
+    "image": "assets/sq.jpg",
+    "url": "games/SquidGame/index.html"
    }
   ]
 }
