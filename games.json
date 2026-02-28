@@ -324,6 +324,11 @@
     "name": "Time Shooter 2",
     "image": "assets/ts2.jpg",
     "url": "TimeShooter2/index.html"
+   },
+   {
+    "name": "Only Up!",
+    "image": "assets/ou.jpeg",
+    "url": "games/OnlyUp!/index.html"
    }
   ]
 }
