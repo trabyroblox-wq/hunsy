@@ -334,6 +334,11 @@
     "name": "Papa's Cheeseria",
     "image": "assets/ppc.webp",
     "url": "games/Papa'sCheeseria/index.html"
+   },
+   {
+    "name": "Papa's Freezeria",
+    "image": "assets/ppf.jpg",
+    "url": "games/Papa'sFreezeria/index.html"
    }
   ]
 }
