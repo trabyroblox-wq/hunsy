@@ -339,6 +339,11 @@
     "name": "Papa's Freezeria",
     "image": "assets/ppf.jpg",
     "url": "games/Papa'sFreezeria/index.html"
+   },
+   {
+    "name": "Papa's Pancakeria",
+    "image": "assets/ppp.jpg",
+    "url": "games/Papa'sPancakeria/index.html"
    }
   ]
 }
