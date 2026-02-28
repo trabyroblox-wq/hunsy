@@ -299,6 +299,11 @@
     "name": "Chib Knight",
     "image": "assets/ck.jpg",
     "url": "games/chibiknight.html"
+   },
+   {
+    "name": "TABS",
+    "image": "assets/tabs.jpg",
+    "url": "games/TABS/index.html"
    }
   ]
 }
