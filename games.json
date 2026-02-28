@@ -349,6 +349,11 @@
     "name": "Papa's Pizzeria",
     "image": "assets/ppi.jpg",
     "url": "games/Papa'sPizzeria/index.html"
+   },
+   {
+    "name": "Papa's Sushiria",
+    "image": "assets/ppsus.webp",
+    "url": "games/Papa'sSushiria/index.html"
    }
   ]
 }
