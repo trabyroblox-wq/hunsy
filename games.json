@@ -292,7 +292,7 @@
    },
    {
     "name": "Tron Flash",
-    "image": "assets/trpn.jpg",
+    "image": "assets/tron.jpg",
     "url": "games/tron.html"
    },
    {
@@ -309,6 +309,11 @@
     "name": "Squid Game",
     "image": "assets/sg.jpg",
     "url": "games/SquidGame/index.html"
+   },
+   {
+    "name": "Stickman Hook",
+    "image": "assets/smh.webp",
+    "url": "games/StickmanHook/index.html"
    }
   ]
 }
