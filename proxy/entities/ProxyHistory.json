@@ -1,0 +1,22 @@
+{
+  "name": "ProxyHistory",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "The URL that was visited"
+    },
+    "title": {
+      "type": "string",
+      "description": "Page title if available"
+    },
+    "visited_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the URL was visited"
+    }
+  },
+  "required": [
+    "url"
+  ]
+}
