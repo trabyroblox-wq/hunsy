@@ -7,7 +7,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="dark purpleBlack">
+<body class="dark purpleBlack" id="mainBody">
 
   <!-- Password Overlay -->
   <div
@@ -74,6 +74,7 @@
     <nav class="nav">
       <a href="index.html">🏠 Home</a>
       <a href="swf.html">💻 SWF Emulator</a>
+      <a href="settings.html">⚙️ Settings</a>
     </nav>
 
     <input id="search" placeholder="Search games..." />
@@ -84,6 +85,17 @@
 
   <!-- Scripts -->
   <script src="script.js"></script>
+
+  <!-- Load Custom Background -->
+  <script>
+    const savedBg = localStorage.getItem("hunsyBackground");
+    if (savedBg) {
+      document.getElementById("mainBody").style.backgroundImage = `url('${savedBg}')`;
+      document.getElementById("mainBody").style.backgroundSize = "cover";
+      document.getElementById("mainBody").style.backgroundPosition = "center";
+      document.getElementById("mainBody").style.backgroundAttachment = "fixed";
+    }
+  </script>
 
   <!-- Password System -->
   <script>
