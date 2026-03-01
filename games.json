@@ -5,6 +5,11 @@
     "image": "form.png",
     "url": "https://forms.gle/EZVMjxYCAK27ccB37"
    },
+   {
+    "name": "Proxy",
+    "image": "there is none",
+    "url": "proxy/index.html"
+   },
     {
       "name": "There Is No Game",
       "image": "assets/game1.png",
