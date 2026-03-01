@@ -369,6 +369,11 @@
     "name": "The Impossible Quiz",
     "image": "assets/tiq.webp",
     "url": "games/tiq.html"
+   },
+   {
+    "name": "Clash of Vikings",
+    "image": "assets/cov.jpg",
+    "url": "games/clashofvikings/index.html"
    }
   ]
 }
