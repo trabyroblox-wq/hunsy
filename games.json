@@ -374,6 +374,11 @@
     "name": "Clash of Vikings",
     "image": "assets/cov.jpg",
     "url": "games/clashofvikings/index.html"
+   },
+   {
+    "name": "Awesome Tanks",
+    "image": "assets/at.webp",
+    "url": "games/AwesomeTanks/index.html"
    }
   ]
 }
