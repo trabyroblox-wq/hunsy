@@ -1,0 +1,20 @@
+{
+  "cloaks": [
+    {
+      "name": "Google Docs",
+      "tabimg": "assets/tabs/docs.png"
+    },
+    {
+      "name": "Google Classroom",
+      "tabimg": "assets/tabs/classroom.png"
+    },
+    {
+      "name": "Google Drive",
+      "tabimg": "assets/tabs/drive.png"
+    },
+    {
+      "name": "School Portal",
+      "tabimg": "assets/tabs/school.png"
+    }
+  ]
+}
