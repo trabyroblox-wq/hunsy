@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-apple-blue: #0071E3;
+  --color-apple-gray: #F5F5F7;
+  --color-apple-dark: #1D1D1F;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F5F5F7] text-[#1D1D1F] font-sans antialiased selection:bg-apple-blue/20 selection:text-apple-blue;
+  }
+  
+  .dark body {
+    @apply bg-[#000000] text-[#F5F5F7];
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-2xl bg-white/70 border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+  
+  .dark .glass {
+    @apply bg-black/70 border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+
+  .apple-card {
+    @apply bg-white dark:bg-[#1C1C1E] rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.04)] border border-black/5 dark:border-white/5 transition-all duration-500 hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] hover:-translate-y-1;
+  }
+
+  .apple-input {
+    @apply bg-[#F5F5F7] dark:bg-[#2C2C2E] border-none rounded-2xl px-6 py-4 focus:ring-4 focus:ring-apple-blue/10 outline-none transition-all duration-300 placeholder:text-black/30 dark:placeholder:text-white/30;
+  }
+
+  .apple-button {
+    @apply bg-apple-blue text-white rounded-2xl px-8 py-4 font-semibold hover:brightness-110 active:scale-95 transition-all duration-300 shadow-lg shadow-apple-blue/20;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-apple-blue to-purple-500;
+}
+
+.mesh-gradient {
+  background-color: #f5f5f7;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 113, 227, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(168, 85, 247, 0.1) 0px, transparent 50%);
+}
+
+.dark .mesh-gradient {
+  background-color: #000000;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.2) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.2) 0px, transparent 50%);
+}
