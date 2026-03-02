@@ -14,6 +14,43 @@ html, body {
   height: 100%;
 }
 
+/* Bear container in TOP RIGHT */
+.bear-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 120px;
+  height: 120px;
+  z-index: 9999;
+  pointer-events: none; /* so it doesn't block clicks */
+}
+
+/* Bear image */
+.bear {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  top: 50px; /* adjust if needed */
+}
+
+/* Eye positions (tweak if needed for your image) */
+.left-eye {
+  left: 38px;
+}
+
+.right-eye {
+  right: 38px;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #000;
