@@ -43,6 +43,14 @@ nav a {
   text-decoration: none;
 }
 
+.hunsy-logo {
+  display: block;
+  margin: 0 auto 8px auto; /* center + small space under */
+  width: 80px;            /* adjust size if needed */
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(183,132,255,0.6));
+}
+
 nav a:hover {
   color: #fff;
 }
