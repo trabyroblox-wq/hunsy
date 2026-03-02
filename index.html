@@ -130,27 +130,8 @@
   <div class="eye left-eye"></div>
   <div class="eye right-eye"></div>
 </div>
-  <script>
-  const eyes = document.querySelectorAll(".eye");
 
-  document.addEventListener("mousemove", (e) => {
-    eyes.forEach((eye) => {
-      const rect = eye.getBoundingClientRect();
-      const eyeCenterX = rect.left + rect.width / 2;
-      const eyeCenterY = rect.top + rect.height / 2;
+  <img src="assets/hunsy.png" alt="Hunsy Logo" class="hunsy-logo">
 
-      const angle = Math.atan2(
-        e.clientY - eyeCenterY,
-        e.clientX - eyeCenterX
-      );
-
-      const maxMove = 4; // how far eyes move
-      const x = Math.cos(angle) * maxMove;
-      const y = Math.sin(angle) * maxMove;
-
-      eye.style.transform = `translate(${x}px, ${y}px)`;
-    });
-  });
-</script>
 </body>
 </html>
