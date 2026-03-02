@@ -5,53 +5,56 @@
   box-sizing: border-box;
 }
 
-.nav a {
-  font-size: 30px;
-}
-
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
 
-
-
 /* ================= HEADER ================= */
 header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 14px 22px;
+  gap: 12px;
+  padding: 16px 22px;
   background: #0b0b0b;
   border-bottom: 1px solid #1c1c1c;
 }
 
+/* TITLE */
 header h1 {
   font-size: 18px;
 }
 
-/* NAV LINKS */
-nav a {
-  margin-left: 18px;
-  font-size: 14px;
-  color: #bbb;
-  text-decoration: none;
-}
-
+/* LOGO */
 .hunsy-logo {
   display: block;
-  margin: 20px auto;       /* center + more space on top */
-  width: 700px;             /* BIG size — adjust up or down as needed */
+  margin: 10px auto 20px;
+  width: 700px;
+  max-width: 90%;
   height: auto;
-  max-width: 90%;           /* prevents it from overflowing on mobile */
-  filter: drop-shadow(0 0 10px rgba(183,132,255,0.6));
+  filter: drop-shadow(0 0 10px rgba(183, 132, 255, 0.6));
+}
+
+/* ================= NAV ================= */
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+nav a {
+  font-size: 18px; /* FIXED SIZE */
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 nav a:hover {
   color: #fff;
 }
 
-/* SEARCH INPUT */
+/* ================= SEARCH ================= */
 #search {
   background: #800080;
   border: none;
@@ -84,7 +87,7 @@ main {
 
 .game:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 
 /* GAME IMAGE */
@@ -101,7 +104,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 17px;
   background: #0d0d0d;
 }
