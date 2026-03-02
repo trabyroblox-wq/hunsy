@@ -46,7 +46,7 @@ nav a {
 .hunsy-logo {
   display: block;
   margin: 20px auto;       /* center + more space on top */
-  width: 300px;             /* BIG size — adjust up or down as needed */
+  width: 900px;             /* BIG size — adjust up or down as needed */
   height: auto;
   max-width: 90%;           /* prevents it from overflowing on mobile */
   filter: drop-shadow(0 0 10px rgba(183,132,255,0.6));
