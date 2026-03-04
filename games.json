@@ -399,6 +399,11 @@
     "name": "Fireboy & Watergirl 2!",
     "image": "assets/fbwg.jpg",
     "url": "games/fireboywatergirl2/index.html"
+   },
+   {
+    "name": "Bloxorz",
+    "image": "assets/Bloxorz/icon.png",
+    "url": "assets/Bloxorz/index.html"
    }
   ]
 }
