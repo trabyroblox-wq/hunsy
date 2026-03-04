@@ -394,6 +394,11 @@
     "name": "Worlds Hardest Game",
     "image": "assets/whg.png",
     "url": "games/WorldsHardestGame-master/index.html"
+   },
+   {
+    "name": "Fireboy & Watergirl 2!",
+    "image": "assets/fbwg.jpg",
+    "url": "games/fireboywatergirl2/index.html"
    }
   ]
 }
