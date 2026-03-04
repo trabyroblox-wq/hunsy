@@ -389,6 +389,11 @@
    "name": "Deltarune (this is ported NOT pirated chapters 1 and 2 and 3 and 4 ARE free)",
     "image": "assets/del.png",
     "url": "https://deltarune-five.vercel.app"
+   },
+   {
+    "name": "Worlds Hardest Game",
+    "image": "assets/whg.png",
+    "url": "games/WorldsHardestGame-master/index.html"
    }
   ]
 }
