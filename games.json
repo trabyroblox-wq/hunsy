@@ -385,5 +385,10 @@
     "image": "assets/blod.jpg",
     "url": "games/BlobOpera/index.html"
    }
+   {
+   "name": "Deltarune (this is ported NOT pirated chapters 1 and 2 and 3 and 4 ARE free)",
+    "image": "assets/del.png",
+    "url": "https://deltarune-five.vercel.app"
+   }
   ]
 }
