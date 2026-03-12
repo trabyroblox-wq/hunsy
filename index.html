@@ -101,20 +101,20 @@
 
   <!-- Password System -->
   <script>
-    const PASSWORD = "doodledoodlepencilfart";
+    const PASSWORD = "imissmrdoodledoodlepencilfart:(";
 
     const pwOverlay = document.getElementById("pwOverlay");
     const pwInput = document.getElementById("pwInput");
     const pwSubmit = document.getElementById("pwSubmit");
     const pwError = document.getElementById("pwError");
 
-    if (localStorage.getItem("hunsyPassword") === PASSWORD) {
+    if (localStorage.getItem("hunsyPassword1") === PASSWORD) {
       pwOverlay.style.display = "none";
     }
 
     pwSubmit.addEventListener("click", () => {
       if (pwInput.value === PASSWORD) {
-        localStorage.setItem("hunsyPassword", PASSWORD);
+        localStorage.setItem("hunsyPassword1", PASSWORD);
         pwOverlay.style.display = "none";
       } else {
         pwError.style.display = "block";
