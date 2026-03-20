@@ -1,129 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hunsy 🐻</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-
-<body class="dark purpleBlack" id="mainBody">
-
-  <!-- Password Overlay -->
-  <div
-    id="pwOverlay"
-    style="
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Vault 🐻</title>
+  <style>
+    :root {
+      --accent: #ff7b00;
+      --accent-dark: #d45e00;
+      --accent-glow: #ff9e4d;
+      --card-bg: rgba(28, 25, 45, 0.72);
+      --text-light: #f5e9d8;
+      --text-muted: #c9b29c;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0b14;
+      color: var(--text-light);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+    /* Background particles + overlay */
+    #particles-js {
       position: fixed;
+      inset: 0;
+      z-index: 1;
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 30% 70%, rgba(255, 123, 0, 0.14) 0%, transparent 60%),
+                  radial-gradient(circle at 70% 30%, rgba(180, 60, 0, 0.11) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Header / Top bar */
+    header {
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0b0b0b;
-      z-index: 99999;
+      z-index: 100;
+      background: rgba(15, 13, 30, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 123, 0, 0.18);
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-glow));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 20px rgba(255, 140, 66, 0.4);
+    }
+    nav {
+      display: flex;
+      gap: 1.6rem;
+      margin-left: auto;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.05rem;
+      transition: color 0.25s;
+    }
+    nav a:hover {
+      color: var(--accent-glow);
+    }
+
+    /* Main content */
+    main {
+      position: relative;
+      z-index: 10;
+      padding: 3rem 1.5rem 5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .game-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px) saturate(140%);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 123, 0, 0.18);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,123,0,0.08) inset;
+      transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
       flex-direction: column;
-      color: #fff;
-    "
-  >
-    <h2>You Found the Site Now Found the Password 😂🐻</h2>
+      position: relative;
+    }
+    .game-card:hover {
+      transform: translateY(-14px) scale(1.035);
+      box-shadow: 0 28px 70px rgba(255, 90, 0, 0.32),
+                  0 0 0 2px rgba(255,140,66,0.25) inset;
+      border-color: rgba(255, 140, 66, 0.45);
+    }
+    .game-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(255,140,66,0.08));
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+    .game-card:hover::before {
+      opacity: 1;
+    }
+    .game-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid rgba(255,123,0,0.25);
+    }
+    .game-info {
+      padding: 1.5rem 1.6rem 1.8rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .game-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: #ffd4a3;
+      line-height: 1.2;
+    }
+    .game-desc {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.3rem;
+      flex: 1;
+    }
+    .play-btn {
+      background: linear-gradient(90deg, var(--accent), #ff9e4d);
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(255,123,0,0.45);
+    }
+    .play-btn:hover {
+      background: linear-gradient(90deg, #ff9e4d, #ffb370);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255,140,66,0.6);
+    }
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      nav { margin-left: 0; flex-wrap: wrap; gap: 1rem; }
+      main { padding-top: 2rem; }
+    }
+  </style>
+</head>
+<body>
 
-    <input
-      type="password"
-      id="pwInput"
-      placeholder="Password"
-      style="
-        padding: 10px 15px;
-        border-radius: 8px;
-        border: none;
-        margin-top: 10px;
-        font-size: 16px;
-      "
-    >
+  <div id="particles-js"></div>
+  <div class="overlay"></div>
 
-    <button
-      id="pwSubmit"
-      style="
-        margin-top: 10px;
-        padding: 10px 20px;
-        border-radius: 8px;
-        border: none;
-        background: #b784ff;
-        color: #0b0b0b;
-        font-weight: bold;
-        cursor: pointer;
-      "
-    >
-      Submit
-    </button>
-
-    <div
-      id="pwError"
-      style="margin-top: 10px; color: red; display: none;"
-    >
-      Incorrect password!
+  <header>
+    <div class="logo-title">
+      <h1>Game Vault 🐻</h1>
     </div>
-  </div>
-
-  <!-- Header -->
-  <header class="top">
-    <img src="assets/hunsy.png" alt="Hunsy Logo" class="hunsy-logo">
-    <h1>Hunsy 🐻</h1>
-
-    <!-- NAV BAR -->
-    <nav class="nav">
+    <nav>
       <a href="index.html">🏠 Home</a>
       <a href="swf.html">💻 SWF Emulator</a>
       <a href="settings.html">⚙️ Settings</a>
       <a href="proxy/index.html">🌐 Proxy</a>
     </nav>
-
-    <input id="search" placeholder="Search games..." />
   </header>
 
-  <!-- Game grid -->
-  <main id="gameGrid"></main>
+  <main>
+    <div class="games-grid" id="gamesGrid"></div>
+  </main>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
-
-  <!-- Load Custom Background -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    const savedBg = localStorage.getItem("hunsyBackground");
-    if (savedBg) {
-      document.getElementById("mainBody").style.backgroundImage = `url('${savedBg}')`;
-      document.getElementById("mainBody").style.backgroundSize = "cover";
-      document.getElementById("mainBody").style.backgroundPosition = "center";
-      document.getElementById("mainBody").style.backgroundAttachment = "fixed";
-    }
-  </script>
-
-  <!-- Password System -->
-  <script>
-    const PASSWORD = "doodledoodlepencilfart";
-
-    const pwOverlay = document.getElementById("pwOverlay");
-    const pwInput = document.getElementById("pwInput");
-    const pwSubmit = document.getElementById("pwSubmit");
-    const pwError = document.getElementById("pwError");
-
-    if (localStorage.getItem("hunsyPassword") === PASSWORD) {
-      pwOverlay.style.display = "none";
-    }
-
-    pwSubmit.addEventListener("click", () => {
-      if (pwInput.value === PASSWORD) {
-        localStorage.setItem("hunsyPassword", PASSWORD);
-        pwOverlay.style.display = "none";
-      } else {
-        pwError.style.display = "block";
-      }
+    // Particles - repel from mouse
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 50, "density": { "enable": true, "value_area": 1000 } },
+        "color": { "value": ["#ff7b00", "#ff9e4d", "#ffb370", "#d45e00"] },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.45, "random": true, "anim": { "enable": true, "speed": 1.2, "opacity_min": 0.15 } },
+        "size": { "value": 3.2, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.4 } },
+        "line_linked": { "enable": true, "distance": 140, "color": "#ff9e4d", "opacity": 0.22, "width": 1.1 },
+        "move": { "enable": true, "speed": 1.1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": false },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 130, "duration": 0.4, "speed": 8 }
+        }
+      },
+      "retina_detect": true
     });
 
-    pwInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") pwSubmit.click();
-    });
+    // Load games
+    const grid = document.getElementById("gamesGrid");
+    fetch("games.json")
+      .then(r => r.ok ? r.json() : Promise.reject("Couldn't load games.json"))
+      .then(data => {
+        grid.innerHTML = "";
+        (data.games || []).forEach(game => {
+          const card = document.createElement("a");
+          card.href = `play.html?url=${encodeURIComponent(game.url)}&title=${encodeURIComponent(game.title || "Game")}`;
+          card.className = "game-card";
+          card.innerHTML = `
+            <img src="${game.image || 'https://via.placeholder.com/300x180?text=Game'}" alt="${game.title || 'Game'}" loading="lazy">
+            <div class="game-info">
+              <h2 class="game-title">${game.title || "Unnamed Game"}</h2>
+              <p class="game-desc">${game.description || ""}</p>
+              <div class="play-btn">Play Now →</div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      })
+      .catch(err => {
+        grid.innerHTML = `<div style="color:#ff6b6b; text-align:center; font-size:1.5rem; margin:6rem 1rem;">
+          ${err.message}<br><small>Make sure games.json exists in the same folder</small>
+        </div>`;
+      });
   </script>
 
 </body>
